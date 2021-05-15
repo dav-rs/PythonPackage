@@ -20,6 +20,7 @@ This repository contains an example for Publishing Python Packages on PyPi. The 
 	$ pip install twine
 	$ twine upload dist/*
 12. (Optional) $ pip install tox and then $ vim tox.ini to create the configuration for using tox to do the testing. Once this file is complete use $ tox 
+13. (Optional) For new releases, change the version in the setup.py and omit the previous version as follows $ twine upload --skip-existing dist/*
 
 *Additional information:*
 
