@@ -18,5 +18,13 @@ setup(
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
+    extras_require = {
+        "dev": [
+            "pytest>=3.7",
+        ],
+    },
+    url="https://github.com/dav-rs/PythonPackage/tree/main/Encrypter",
+    author="David Rios",
+    author_email="hdavidrios@hotmail.com",
     # install_requires=["blessings ~= 1.7"] e.g. if blessings was required for the installation
 )

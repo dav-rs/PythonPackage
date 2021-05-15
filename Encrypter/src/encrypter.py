@@ -10,9 +10,10 @@ def encrypt_file(file, key_file=None):
             key = filekey.read()
     else:
         key = Fernet.generate_key() # key generation
+        key_file = 'my_key.key'
 
         # string the key in a file
-        with open('my_key.key', 'wb') as filekey:
+        with open(key_file, 'wb') as filekey:
             filekey.write(key)
 
     fernet = Fernet(key) # using the generated key
@@ -29,3 +30,24 @@ def encrypt_file(file, key_file=None):
     # opening the file in write mode and writing the encrypted data
     with open(file_name, 'wb') as encrypted_file:
         encrypted_file.write(encrypted)
+
+    return (file_name, key_file)
+
+def decrypt_file(encrypted_file, key):
+    ## using the key
+    with open(key, 'r') as key_file:
+        my_key = key_file.read()
+    fernet = Fernet(my_key)
+
+    # opening the encrypted file
+    with open(encrypted_file, 'rb') as enc_file:
+        encrypted = enc_file.read()
+
+    # decrypting the file
+    decrypted = fernet.decrypt(encrypted)
+    decrypted_file_name = str(encrypted_file+'_decrypted')
+    with open(decrypted_file_name, 'wb') as decrypted_file:
+        decrypted_file.write(decrypted)
+
+    return decrypted_file_name
+
