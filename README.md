@@ -19,6 +19,7 @@ This repository contains an example for Publishing Python Packages on PyPi. The 
 11. Now that both, the wheel and the distribution of the package are in the dist directory, we use twine to push to PyPI
 	$ pip install twine
 	$ twine upload dist/*
+12. (Optional) $ pip install tox and then $ vim tox.ini to create the configuration for using tox to do the testing. Once this file is complete use $ tox 
 
 *Additional information:*
 
