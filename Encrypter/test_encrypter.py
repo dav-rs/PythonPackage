@@ -1,4 +1,4 @@
-from encrypter-fernet import *
+from encrypter_fernet_dr import *
 import filecmp
 
 def test_encrypter_file(orig_file='test.txt', key=None):

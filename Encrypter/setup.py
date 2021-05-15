@@ -4,10 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="encrypter-fernet",
+    name="encrypter_fernet_dr",
     version="0.0.1",
     description="Encrypt file using fernet",
-    py_modules=["encrypter-fernet"],
+    py_modules=["encrypter_fernet_dr"],
     package_dir={"":"src"},
     classifiers=[
         "Programming Language :: Python :: 3",

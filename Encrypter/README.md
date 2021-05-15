@@ -13,13 +13,13 @@ pip install encrypter
 
 ## Usage
 ``` python
-from encrypter-fernet import encrypt_file
+from encrypter_fernet_dr import encrypt_file
 
 # generate key and encrypted copy of my_file in the working directory
 encrypt_file('my_file')
 ```
 ``` python
-from encrypter-fernet import decrypt_file
+from encrypter_fernet_dr import decrypt_file
 
 # decrypt the file passing the key generated or used before
 decrypt_file('my_file_encrypted', 'my_key')
