@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="encrypter_fernet_dr",
-    version="0.0.1",
+    version="0.0.2",
     description="Encrypt file using fernet",
     py_modules=["encrypter_fernet_dr"],
     package_dir={"":"src"},
