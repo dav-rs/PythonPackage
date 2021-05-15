@@ -24,7 +24,7 @@ def encrypt_file(file, key_file=None):
     # encrypting the file
     encrypted = fernet.encrypt(original)
 
-    file_name = str(file)+'_encrypted'
+    file_name = str(file.name)+'_encrypted'
 
     # opening the file in write mode and writing the encrypted data
     with open(file_name, 'wb') as encrypted_file:
