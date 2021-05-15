@@ -1,9 +1,9 @@
 # PythonPackage
-This repository contains an example for Publishing Python Packages on PyPi. The python module encrypter.py contains the function encrypt_file() which creates an encrypted copy of a file using Fernet (symmetric encryption) in the working directory.
+This repository contains an example for Publishing Python Packages on PyPi. The python module encrypter_fernet_dr.py contains the function encrypt_file() which creates an encrypted copy of a file using Fernet (symmetric encryption) in the working directory.
     The function takes a file as main argument and a key_file as optional argument. If no key_file is provided, then a key for the encryption is created using Fernet.generate_key()
 
 ### The steps to publish the Package are as follows:
-1. Create the python module encrypter.py and locate it in a source directory (src)
+1. Create the python module encrypter_fernet_dr.py and locate it in a source directory (src)
 2. Create a setup.py script in the same directory containing the src folder
 3. Use the command $ python setup.py bdist_wheel 
 	This command will create a Wheel to avoid the intermediate step of building the package of the source distribution, i.e. it is a ready-to-install format4. Install it locally: $ pip install -e .
